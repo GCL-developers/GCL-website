@@ -95,6 +95,7 @@ font-family: 'Goudy Bookletter 1911', serif;
   position: relative;
   z-index: 99;
 }
+
 /* Sticky Menu */
 body.sticky-header .header {
   position: fixed;
@@ -256,6 +257,11 @@ body.sticky-header .header .nav-main {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   float: left;
+}
+.bsci img
+{
+  width: 100px;
+  height: 100px;
 }
 .header .logo img {
   position: relative;
