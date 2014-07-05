@@ -7,9 +7,9 @@
 	<!-- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
-	<title>Team | Responsive HTML5 Template</title>
+	<title>Our People | GCL Clothing</title>
 	<meta name="description" content="Stability - Responsive HTML5 Template - 1.0">
-	<meta name="author" content="http://themeforest.net/user/dan_fisher">
+	<meta name="author" content="Pawan Pal and Devesh Khandelwal">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<!-- Mobile Specific Metas
@@ -56,6 +56,33 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+	<script type='text/javascript' src='https://www.google.com/jsapi'></script>  
+	<script type='text/javascript'>  
+    google.load('visualization', '1', {packages:['orgchart']});  
+    google.setOnLoadCallback(drawChart);  
+    function drawChart() {  
+     var data = new google.visualization.DataTable();  
+     data.addColumn('string', 'Node');  
+     data.addColumn('string', 'Parent');  
+     data.addRows([  
+      ['1', ''],  
+      ['1.1', '1'],  
+      ['1.2', '1'],  
+      ['1.1.1', '1.1'],  
+      ['1.1.2', '1.1'],  
+      ['1.1.3', '1.1'],  
+      ['1.2.1', '1.2'],  
+      ['1.2.2', '1.2'],  
+      ['1.1.1.1', '1.1.1'],  
+      ['1.1.1.2', '1.1.1'],  
+      ['1.1.3.1', '1.1.3'],  
+      ['1.2.2.1', '1.2.2'],  
+      ['1.2.2.2', '1.2.2']  
+     ]);  
+     var chart = new google.visualization.OrgChart(document.getElementById('people'));  
+     chart.draw(data);  
+    }
+    </script> 
 	
 </head>
 <body>
@@ -91,8 +118,8 @@
 						<!-- <a href="index.html"><img src="images/logo.png" alt="Stability"></a> -->
 						<h2><a href="index.html">GCL Clothing</a></h2>
 						<p class="tagline">Apparel Manufacturer and Exporter since 1973</p>
-						<p class="tagline">accredited by SEDEX and BSCI </p>
-					</div>
+<!-- 						<p class="tagline">accredited by SEDEX and BSCI </p>
+ -->					</div>
 					<!-- Logo / End -->
 
 					<button type="button" class="navbar-toggle">
@@ -226,6 +253,7 @@
 						<div class="col-md-6">
 							<h1>Our Team</h1>
 						</div>
+						<!--
 						<div class="col-md-6">
 							<ul class="breadcrumb">
 								<li><a href="index.html">Home</a></li>
@@ -233,6 +261,7 @@
 								<li class="active">Our Team</li>
 							</ul>
 						</div>
+						-->
 					</div>
 				</div>
 			</section>
@@ -240,7 +269,7 @@
 
 			<!-- Page Content -->
 			<section class="page-content">
-				<div class="container">
+				<div class="container" id="people">
 
 
 
@@ -250,15 +279,17 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">CEO</span>
-								<h4 class="team-name">John Doe</h4>
+								<span class="team-head-info">Managing Director</span>
+								<h4 class="team-name">Mr. Yogeshwar Nath</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:johndoe@dan-fisher.com">johndoe@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:@gclclothing.com">@gclclothing.com</a>
 									</li>
+									<!--
 									<li>
 										<i class="fa fa-skype"></i><a href="#">john_doe</a>
 									</li>
+									-->
 								</ul>
 							</header>
 							<div class="team-excerpt">
@@ -271,15 +302,17 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">Web Designer</span>
-								<h4 class="team-name">Michael Smith</h4>
+								<span class="team-head-info">Director</span>
+								<h4 class="team-name">Mr. Ashish Nath</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:mikesmith@dan-fisher.com">mikesmith@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:ashish@gclclothing.com">ashish@gclclothing.com.com</a>
 									</li>
+									<!--
 									<li>
 										<i class="fa fa-skype"></i><a href="#">mike_smith</a>
 									</li>
+									-->
 								</ul>
 							</header>
 							<div class="team-excerpt">
@@ -292,15 +325,17 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">PHP Developer</span>
-								<h4 class="team-name">Sasha Gray</h4>
+								<span class="team-head-info">Director</span>
+								<h4 class="team-name">Mr. Aditya Nath</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:sashagray@dan-fisher.com">sashagray@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:@gclclothing.com">@gclclothing.com</a>
 									</li>
+									<!--
 									<li>
 										<i class="fa fa-skype"></i><a href="#">sasha_gray</a>
 									</li>
+									-->
 								</ul>
 							</header>
 							<div class="team-excerpt">
@@ -313,15 +348,17 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">HTML Coder</span>
-								<h4 class="team-name">John Doe</h4>
+								<span class="team-head-info">General Manager</span>
+								<h4 class="team-name">Mr. Rajvir Singh</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:hannadoe@dan-fisher.com">hannadoe@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:@gclclothing.com">@gclglothing.com</a>
 									</li>
+									<!--
 									<li>
 										<i class="fa fa-skype"></i><a href="#">hanna_doe</a>
 									</li>
+									-->
 								</ul>
 							</header>
 							<div class="team-excerpt">
@@ -334,15 +371,17 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">CEO</span>
-								<h4 class="team-name">John Doe</h4>
+								<span class="team-head-info">General Admin and HR</span>
+								<h4 class="team-name">Mr. Arjun Singh</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:johndoe@dan-fisher.com">johndoe@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:@gclclothing.com">@gclclothing.com</a>
 									</li>
+									<!--
 									<li>
 										<i class="fa fa-skype"></i><a href="#">john_doe</a>
 									</li>
+									-->
 								</ul>
 							</header>
 							<div class="team-excerpt">
@@ -355,15 +394,17 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">Web Designer</span>
-								<h4 class="team-name">Michael Smith</h4>
+								<span class="team-head-info">Merchandising Manager</span>
+								<h4 class="team-name">Mrs. Sanskriti</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:mikesmith@dan-fisher.com">mikesmith@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:@gclclothing.com">@gclclothing.com</a>
 									</li>
+									<!--
 									<li>
 										<i class="fa fa-skype"></i><a href="#">mike_smith</a>
 									</li>
+									-->
 								</ul>
 							</header>
 							<div class="team-excerpt">
@@ -376,15 +417,15 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">PHP Developer</span>
-								<h4 class="team-name">Sasha Gray</h4>
+								<span class="team-head-info">Marketing Manager</span>
+								<h4 class="team-name">Mr. Alok</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:sashagray@dan-fisher.com">sashagray@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:@gclclothing.com">@gclclothing.com</a>
 									</li>
-									<li>
+									<!-- <li>
 										<i class="fa fa-skype"></i><a href="#">sasha_gray</a>
-									</li>
+									</li> -->
 								</ul>
 							</header>
 							<div class="team-excerpt">
@@ -397,15 +438,15 @@
 								<a href="#"><img src="http://placehold.it/258x258" alt=""></a>
 							</figure>
 							<header class="team-head">
-								<span class="team-head-info">HTML Coder</span>
-								<h4 class="team-name">John Doe</h4>
+								<span class="team-head-info">Fabric In-Charge</span>
+								<h4 class="team-name">Mr. Ravinder and Mr. P. N. Sharma</h4>
 								<ul class="team-social list-unstyled">
 									<li>
-										<i class="fa fa-envelope-o"></i><a href="mailto:hannadoe@dan-fisher.com">hannadoe@dan-fisher.com</a>
+										<i class="fa fa-envelope-o"></i><a href="mailto:@gclclothing.com">@gclclothing.com</a>
 									</li>
-									<li>
+									<!-- <li>
 										<i class="fa fa-skype"></i><a href="#">hanna_doe</a>
-									</li>
+									</li> -->
 								</ul>
 							</header>
 							<div class="team-excerpt">
