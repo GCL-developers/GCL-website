@@ -1436,7 +1436,7 @@ header.header-fixed {
 }
 .page-heading .breadcrumb {
   background: none;
-  text-align: center;
+  text-align: right;
   font-size: 10px;
   text-transform: uppercase;
   margin: 0;
@@ -1450,7 +1450,7 @@ header.header-fixed {
 }
 .page-heading .breadcrumb > li + li:before {
   content: "\2022";
-  padding-right: 6px;
+  padding-right: 20px;
 }
 .page-heading .breadcrumb a {
   color: #fff;
