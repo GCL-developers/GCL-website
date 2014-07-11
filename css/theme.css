@@ -72,7 +72,7 @@ body.boxed .site-wrapper {
 }
 @media (min-width: 992px) {
   body.boxed .site-wrapper {
-    margin: 30px auto;
+    margin: 30px auto;3
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -116,7 +116,7 @@ body.sticky-header .header .logo h2 {
   font-size: 30px;
 }
 body.sticky-header .header .nav-main {
-  min-height: 80px;
+  min-height: 50px;
 }
 @media all and (min-width: 992px) {
   body.sticky-header .header .flexnav > li > a {
@@ -241,7 +241,7 @@ body.sticky-header .header .nav-main {
   left: 0;
   right: 0;
   top: 0;
-  height: 100px;
+  height: 50px;
   background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-repeat: repeat-x;
@@ -357,7 +357,7 @@ body.sticky-header .header .nav-main {
 @media (min-width: 992px) {
   .nav-main {
     background: none;
-    min-height: 114px;
+    min-height: 50px;
   }
 }
 @media (min-width: 767px) and (max-width: 992px) {
@@ -684,7 +684,7 @@ body.sticky-header .header .nav-main {
 }
 @media all and (min-width: 992px) {
   .header-menu-fullw .nav-main {
-    height: 71px;
+    height: 50px;
     border-top: 1px solid #d8d8d8;
   }
   .header-menu-fullw .nav-main .flexnav {
@@ -1436,7 +1436,7 @@ header.header-fixed {
 }
 .page-heading .breadcrumb {
   background: none;
-  text-align: center;
+  text-align: right;
   font-size: 10px;
   text-transform: uppercase;
   margin: 0;
@@ -1450,7 +1450,7 @@ header.header-fixed {
 }
 .page-heading .breadcrumb > li + li:before {
   content: "\2022";
-  padding-right: 6px;
+  padding-right: 20px;
 }
 .page-heading .breadcrumb a {
   color: #fff;
