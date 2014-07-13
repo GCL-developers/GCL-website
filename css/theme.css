@@ -1128,7 +1128,7 @@ header.header-fixed {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: #dc2a0b;
+  background: #0000ff;
 }
 .tp-bullets.simplebullets .bullet:hover:after,
 .tp-bullets.simplebullets .bullet.selected:after {
@@ -2689,7 +2689,7 @@ h2 + .featured-section {
 }
 .project-item .project-img:hover .overlay {
   opacity: 1;
-  filter: alpha(opacity=50);
+  filter: alpha(opacity=100);
 }
 .project-item .project-img:hover .dlink,
 .project-item .project-img:hover .zoom {
