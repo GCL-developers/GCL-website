@@ -1128,7 +1128,7 @@ header.header-fixed {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: #dc2a0b;
+  background: #0000ff;
 }
 .tp-bullets.simplebullets .bullet:hover:after,
 .tp-bullets.simplebullets .bullet.selected:after {
@@ -2651,8 +2651,8 @@ h2 + .featured-section {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 50%;
-  color: #dc2a0b;
+  width: 100%;
+  color: #b6b6b4;
   background: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   opacity: 0;
@@ -2665,7 +2665,7 @@ h2 + .featured-section {
 }
 .project-item .dlink:hover,
 .project-item .zoom:hover {
-  background: #dc2a0b;
+  background: #b6b6b4;
   color: #fff;
 }
 .project-item .dlink .fa,
