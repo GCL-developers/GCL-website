@@ -157,7 +157,20 @@ right connector from last child*/
 .tree li a:hover+ul ul::before{
 	border-color:  #94a0b4;
 }
+	#ashishnath
+	{
+		display: none;
+	}
 
+	#adityanath
+	{
+		display: none;
+	}
+
+	#rajvirsingh
+	{
+		display: none;
+	}
 /*Thats all. I hope you enjoyed it.
 Thanks :)*/
 	</style>
@@ -190,6 +203,19 @@ Thanks :)*/
     }
     </script> 
     -->
+	
+	<script type="text/javascript">
+
+		function toggle(id)
+		{
+			var e = document.getElementById(id);
+			if (e.style.display=='block')
+				e.style.display = 'none';
+			else
+				e.style.display = 'block';
+		}
+
+	</script>
 	
 </head>
 <body>
@@ -416,52 +442,80 @@ Thanks :)*/
 					We will create a family tree using just CSS(3)
 					The markup will be simple nested lists
 					-->
+					<center>
 					<div class="tree col-md-12">
 						<ul>
-							<li>
-								<a href="">Mr. Yogeshwar Nath<br>Managing Director</a>
-								<div class="container">
+							<li class="top-person">
+								<a href="#" class="btn btn-success">Mr. Yogeshwar Nath<br>Managing Director</a>
 								<ul>
-									<li>
-										<a href="#">Mr. Ashish Nath<br>Director</a>
-										<ul>
-											<li>
+									<li class="first">
+										<a href="#" class="btn btn-success" onclick="toggle('ashishnath');">Mr. Ashish Nath<br>Director</a>
+										<ul class="ashish" id="ashishnath">
+											<li class="ashish">
 												<a href="#">Mr. Arjun Singh<br>General Admin and HR Manager</a>
 											</li>
-											<li>
+											<li class="ashish">
 												<a href="#">Ms. Sanskriti<br>Merchandising Manager</a>
 												<ul>
-													<li>
+													<li class="ashish">
 														<a href="">Mr. Shravan and Mr. Kapil<br>Merchandiser</a>
 													</li>
-													<li>
+													<li class="ashish">
 														<a href="">Mr. Abdul and Mr. Satish Mittal<br>Pattern Master</a>
 													</li>
 												</ul>
 											</li>
-											<li>
+											<li class="ashish">
 												<a href="#">Mr. Alok<br>Marketing Manager</a>
 											</li>
-											<li>
+											<li class="ashish">
 												<a href="#">Mr. Ravinder and Mr. P N Sharma<br>Fabric In-Charge</a>
 											</li>
 										</ul>
 									</li>
-									<li>
-										<a href="#">Mr. Rajvir Singh</a>
+									<li class="first">
+										<a href="#" class="btn btn-success" onclick="toggle('rajvirsingh');">Mr. Rajvir Singh<br>General Manager</a>
+										<ul class="rajvir" id="rajvirsingh">
+											<li class="rajvir">
+												<a href="#">Mr. Puran Singh<br>Quality Manager</a>
+												<ul>
+													<li class="rajvir">
+														<a href="#">QC and QA Team</a>
+													</li>
+												</ul>
+											</li>
+											<li class="rajvir">
+												<a href="#">Mrs. Shashi Bala<br>Accessories Store</a>
+											</li>
+											<li class="rajvir">
+												<a href="#">Mr. Sudarshan<br>Mr. Sudarshan</a>
+											</li>
+											<li class="rajvir">
+												<a href="#">Mr. Rustam and Mr. Shambhu<br>Stitching In-Charge</a>
+											</li>
+											<li class="rajvir">
+												<a href="#">Mr. Nawab<br>Embroidery In-Charge</a>
+											</li>
+											<li class="rajvir">
+												<a href="#">Mr. Sunil and Mr. Ashish<br>Finishing In-Charge</a>
+											</li>
+											<li class="rajvir">
+												<a href="#">Mr. Rajender<br>Packing In-Charge</a>
+											</li>
+										</ul>
 									</li>
-									<li>
-										<a href="#">Mr. Aditya Nath<br>Director</a>
-										<ul>
-											<li><a href="#">Mr. Anshu Mishra<br>Senior Merchant</a></li>
-											<li><a href="#">Mr. K K Jain<br>Manager Finance</a></li>
+									<li class="first">
+										<a href="#" class="btn btn-success" onclick="toggle('adityanath');">Mr. Aditya Nath<br>Director</a>
+										<ul class="aditya" id="adityanath">
+											<li class="aditya"><a href="#">Mr. Anshu Mishra<br>Senior Merchant</a></li>
+											<li class="aditya"><a href="#">Mr. K K Jain<br>Manager Finance</a></li>
 										</ul>
 									</li>
 								</ul>
-								</div>
 							</li>
 						</ul>
 					</div>
+					</center>
 				</div>
 
 
@@ -606,8 +660,8 @@ Thanks :)*/
 	</div>
 	
 	
-	
-	
+	<!--Script for toggling items-->
+
 	
 	<!-- Javascript Files
 	================================================== -->
