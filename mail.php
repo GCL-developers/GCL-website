@@ -1,11 +1,6 @@
 <?php
-session_cache_limiter('nocache');
-header('Expires: ' . gmdate('r', 0));
-
-header('Content-type: application/json');
-
 // Enter your email address
-$to = 'pawanpal004@gmail.com';
+$to = 'devesh.khandelwal@outlook.com';
 
 $subject = $_POST['subject'];
 
@@ -28,30 +23,25 @@ if($to) {
 		)
 	);
 
-	$message = "";
+	//$message = "Fuck OFF.";
 
 	foreach($fields as $field) {
 		$message .= $field['text'].": " . htmlspecialchars($field['val'], ENT_QUOTES) . "<br>\n";
 	}
 
 	$headers = '';
-	$headers .= 'From: ' . $name . ' <' . $email . '>' . "\r\n";
-	$headers .= "Reply-To: " .  $email . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+	$headers .= 'From: ' . $name . ' <' . $email . '>';
+	$headers .= "Reply-To: " .  $email;
+	$headers .= "MIME-Version: 1.0";
+	$headers .= "Content-Type: text/html; charset=UTF-8";
 
-	if (mail($to, $subject, $message, $headers)){
+
+	if (mail($to, $subject, $message)){
 		$arrResult = array ('response'=>'success');
 	} else{
 		$arrResult = array ('response'=>'error');
 	}
 
 	echo json_encode($arrResult);
-
-} else {
-
-	$arrResult = array ('response'=>'error');
-	echo json_encode($arrResult);
-
 }
 ?>
