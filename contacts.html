@@ -37,6 +37,14 @@
    <!-- Skin CSS -->
 	<link rel="stylesheet" href="css/skins/red.css">
 
+	<style type="text/css">
+		.header-top
+		{
+			display: none;
+		}
+
+		
+	</style>
    <!-- Head Libs -->
 	<script src="vendor/modernizr.js"></script>
 
@@ -64,8 +72,8 @@
 		
 		<!-- Header -->
 		<header class="header header-default">
-			<!--
-			<div class="header-top">
+			
+			<div class="header-top" id="top-bar">
 				<div class="container">
 					<div class="header-top-left">
 						<ul class="header-top-nav">
@@ -83,7 +91,7 @@
 						</span>
 					</div>
 				</div>
-			</div>-->
+			</div>
 			<div class="header-main">
 				<div class="container">
 					<!-- Logo -->
@@ -245,7 +253,7 @@
 					<div class="row">
 						<div class="col-md-9">
 							<h2>Contact Form</h2>
-							<form action="php/contact-form.php" id="contact-form">
+							<form action="php/mail.php" id="contact-form" method="POST">
 
 								<div class="alert alert-success hidden" id="contact-alert-success">
 									<strong>Success!</strong> Thank you for your message. Reply will be in a while!
