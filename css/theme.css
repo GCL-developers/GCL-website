@@ -57,6 +57,9 @@ body {
   line-height: 20px;
   margin: 0;
 }
+.logo-sticky {
+  margin-top: 44px;
+}
 body.bg1 {
   background: #ffffff url(../images/bg1.jpg) 50% 0 no-repeat;
   -webkit-background-size: contain;
@@ -99,7 +102,7 @@ font-family: 'Goudy Bookletter 1911', serif;
 /* Sticky Menu */
 body.sticky-header .header {
   position: fixed;
-  top: -44px;
+  top: 0px;
   width: 100%;
   z-index: 9999;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
