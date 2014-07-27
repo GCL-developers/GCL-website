@@ -69,10 +69,13 @@
 }
 
 .tree li {
-	float: left; text-align: center;
+	float: none; text-align: center;
 	list-style-type: none;
 	position: relative;
 	padding: 20px 5px 0 5px;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
 	
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -157,17 +160,17 @@ right connector from last child*/
 .tree li a:hover+ul ul::before{
 	border-color:  #94a0b4;
 }
-	#ashishnath
+	#ashishnathlist
 	{
 		display: none;
 	}
 
-	#adityanath
+	#adityanathlist
 	{
 		display: none;
 	}
 
-	#rajvirsingh
+	#rajvirsinghlist
 	{
 		display: none;
 	}
@@ -206,14 +209,38 @@ Thanks :)*/
 	
 	<script type="text/javascript">
 
-		list = 
+		
 		function toggle(id)
 		{
 			var e = document.getElementById(id);
-			if (e.style.display=='block')
-				e.style.display = 'none';
-			else
-				e.style.display = 'block';
+			// var wholetree = document.getElementById('wholetree');
+			// if(e.style.display == 'none')
+			// {
+			// 	wholetree.style.display = 'none';
+			// 	e.style.display = 'block';
+			// }
+			// else
+			// {
+			// 	e.style.display = 'none';
+			// 	wholetree.style.display = 'block';
+			// }
+
+			var ashishnath = document.getElementById('ashishnath');
+			var rajvirsingh = document.getElementById('rajvirsingh');
+			var adityanath = document.getElementById('adityanath');
+
+			if (e.style.display == 'block')
+			{
+				ashishnath.style.display = 'none';
+				rajvirsingh.style.display = 'none';
+				adityanath.style.display = 'none';
+			}
+
+			e.style.display = 'block';
+			var listid = string(id);
+			listid = listid + 'list';
+			var elist = document.getElementById(listid);
+			elist.style.display = 'block';
 		}
 
 	</script>
@@ -433,15 +460,15 @@ Thanks :)*/
 					We will create a family tree using just CSS(3)
 					The markup will be simple nested lists
 					-->
-					<center>
+					<div class="row">
 					<div class="tree col-md-12">
-						<ul>
-							<li class="top-person">
+						<ul style="" id="wholetree">
+							<li class="top-person" style="">
 								<a href="#" class="btn btn-lg btn-default">Mr. Yogeshwar Nath<br>Managing Director</a>
-								<ul>
-									<li class="first">
-										<a href="#" class="btn btn-default" onclick="toggle('ashishnath');">Mr. Ashish Nath<br>Director</a>
-										<ul class="ashish" id="ashishnath">
+								<ul style="">
+									<li class="first" style="" id="ashishnath">
+										<a href="#" style="" class="btn btn-default" onclick="toggle('ashishnath');">Mr. Ashish Nath<br>Director</a>
+										<ul class="ashish" id="ashishnathlist">
 											<li class="ashish">
 												<a href="#">Mr. Arjun Singh<br>General Admin and HR Manager</a>
 											</li>
@@ -464,9 +491,9 @@ Thanks :)*/
 											</li>
 										</ul>
 									</li>
-									<li class="first">
-										<a href="#" class="btn btn-default" onclick="toggle('rajvirsingh');">Mr. Rajvir Singh<br>General Manager</a>
-										<ul class="rajvir" id="rajvirsingh">
+									<li class="first" id="rajvirsingh">
+										<a href="#" style="" class="btn btn-default" onclick="toggle('rajvirsingh');">Mr. Rajvir Singh<br>General Manager</a>
+										<ul class="rajvir" id="rajvirsinghlist">
 											<li class="rajvir">
 												<a href="#">Mr. Puran Singh<br>Quality Manager</a>
 												<ul>
@@ -495,9 +522,9 @@ Thanks :)*/
 											</li>
 										</ul>
 									</li>
-									<li class="first">
-										<a href="#" class="btn btn-default" onclick="toggle('adityanath');">Mr. Aditya Nath<br>Director</a>
-										<ul class="aditya" id="adityanath">
+									<li class="first" id="adityanath">
+										<a href="#" style="" class="btn btn-default" onclick="toggle('adityanath');">Mr. Aditya Nath<br>Director</a>
+										<ul class="aditya" id="adityanathlist">
 											<li class="aditya"><a href="#">Mr. Anshu Mishra<br>Senior Merchant</a></li>
 											<li class="aditya"><a href="#">Mr. K K Jain<br>Manager Finance</a></li>
 										</ul>
@@ -506,7 +533,12 @@ Thanks :)*/
 							</li>
 						</ul>
 					</div>
-					</center>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<iframe src="https://onedrive.live.com/embed?cid=D61DCAC16A8DEAB4&resid=D61DCAC16A8DEAB4%211416&authkey=AF3iQkVCdHx4e6s&em=2" width="402" height="327" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
 				</div>
 
 
