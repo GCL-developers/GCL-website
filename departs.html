@@ -46,6 +46,48 @@
 			padding-bottom: 30px;
 			font-size: 11pt;
 		}
+
+		.mytabs
+		{
+			border: 1px solid;
+			padding-left: 5px;
+			padding-right: 5px;
+			border-radius: 10px;
+			font-size: 8.5pt;
+			list-style-type: none;
+			border-color: #fff;
+			text-decoration: none;
+		}
+
+		.mytabs > a
+		{
+			padding-right: 5px;
+		}
+
+		.mytabs > a:hover
+		{
+			text-decoration: none;
+			color: #000;
+		}
+
+		.mytabs:hover
+		{
+			background: #ddd;
+			color: #000;
+
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+		}
+
+		li.active
+		{
+			background: #ddd;
+			color: #000;
+		}
 	</style>
 
 	<!-- Head Libs -->
@@ -140,15 +182,15 @@
 
 						<!-- Carousel Tabs -->
 						<div class="col-md-10">
-							<ul class="breadcrumb">
-								<li data-target="#myTabs" data-slide-to="0" class="active"><a href="#">Merchandising</a></li>
-								<li data-target="#myTabs" data-slide-to="1"><a href="#">Product Development</a></li>
-								<li data-target="#myTabs" data-slide-to="2"><a href="#">Sampling</a></li>
-								<li data-target="#myTabs" data-slide-to="3"><a href="#">Warehouse</a></li>
-								<li data-target="#myTabs" data-slide-to="4"><a href="#">Cutting</a></li>
-								<li data-target="#myTabs" data-slide-to="5"><a href="#">Stitching</a></li>
-								<li data-target="#myTabs" data-slide-to="6"><a href="#">Finishing</a></li>
-								<li data-target="#myTabs" data-slide-to="7"><a href="#">Quality Check</a></li>
+							<ul class="breadcrumb ">
+								<li data-target="#myTabs" data-slide-to="0" class="active mytabs"><a href="#"> Merchandising</a></li>
+								<li data-target="#myTabs" data-slide-to="1" class="mytabs"><a href="#">Product Development</a></li>
+								<li data-target="#myTabs" data-slide-to="2" class="mytabs"><a href="#">Sampling</a></li>
+								<li data-target="#myTabs" data-slide-to="3" class="mytabs"><a href="#">Warehouse</a></li>
+								<li data-target="#myTabs" data-slide-to="4" class="mytabs"><a href="#">Cutting</a></li>
+								<li data-target="#myTabs" data-slide-to="5" class="mytabs"><a href="#">Stitching</a></li>
+								<li data-target="#myTabs" data-slide-to="6" class="mytabs"><a href="#">Finishing</a></li>
+								<li data-target="#myTabs" data-slide-to="7" class="mytabs"><a href="#">Quality Check</a></li>
 							</ul>
 						</div>
 					</div>
@@ -176,7 +218,7 @@ information you need, well ahead of schedule, to help you plan your merchandisin
 						        </div>
 						        <div class="row item">
 					            	<div class="col-md-8">
-					                <img src="images/samples/finishing.jpg" class="img-responsive">
+					                	<img src="images/samples/finishing.jpg" class="img-responsive">
 					                </div>
 					                <div class="col-md-4">
 					                	<p> Garment samples are inevitably important and are developed before starting the bulk production. We lay
@@ -185,11 +227,12 @@ decides the ability of an exporter. We provide our buyers the flexibility to pla
 are satisfied with the quality of our products. We guarantee to provide you our best innovative products
 and with optimum quality. </p>
 										<p> We have an in-house design studio which keeps on researching and developing new products according
-to the latest trend. </p>
+to the latest trend. </p>			
+									</div>
 					            </div>
 					            <div class="row item">
 					            	<div class="col-md-8">
-					                <img src="images/samples/finishing.jpg" class="img-responsive">
+					                	<img src="images/samples/finishing.jpg" class="img-responsive">
 					                </div>
 					                <div class="col-md-4">
 					                	<p> Our sampling department works closely with the merchandising department as merchandiser is the
@@ -272,13 +315,12 @@ fastness, shrink resistance and its durability.
 					                </div>
 					            </div>
 					        </div>
-					</center>
-					
+						</center>
 						<!-- Carousel Controls -->        
-					    </div>
-						    <a href="#myTabs" class="left carousel-control" data-slide="prev"><span class="icon-prev"></span></a>
-	         				<a href="#myTabs" class="right carousel-control" data-slide="next"><span class="icon-next"></span></a>
-						</div>
+					    <!-- </div>
+							<a href="#myTabs" class="left carousel-control" data-slide="prev"><span class="icon-prev"></span></a>
+							<a href="#myTabs" class="right carousel-control" data-slide="next"><span class="icon-next"></span></a>
+						</div> -->
 					</div>
 				</div>
 			</section>
