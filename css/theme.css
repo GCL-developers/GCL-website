@@ -1452,8 +1452,8 @@ header.header-fixed {
   }
 }
 .page-heading .breadcrumb > li + li:before {
-  content: "\2022";
-  padding-right: 20px;
+  content: "";
+  padding-right: 0px;
 }
 .page-heading .breadcrumb a {
   color: #fff;
