@@ -2630,8 +2630,8 @@ h2 + .featured-section {
 }
 .project-item .project-img > img {
   margin-bottom: 0;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 250px;
 }
 .section-dark .project-item .project-img > img {
   background: rgba(255, 255, 255, 0.05);
