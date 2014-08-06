@@ -2924,3 +2924,8 @@ h2 + .featured-section {
   padding-left: 5px;
   padding-right: 5px;
 }
+.gcllogo
+{
+  height: 37px !important;
+  width: auto;
+}
