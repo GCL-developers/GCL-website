@@ -2929,3 +2929,34 @@ h2 + .featured-section {
   height: 37px !important;
   width: auto;
 }
+.myfooter > li > a
+{
+  color: #888888;
+}
+.myfooter > li > a:hover
+{
+  color: #000000;
+}
+.myfooter
+{
+  display: table;
+  width: 100%;
+  list-style: none;
+}
+.myfooter > li
+{
+  display: table-cell;
+  text-align: center;
+}
+.myfooter > li:first-child
+{
+  text-align: left;
+}
+.myfooter > li:last-child
+{
+  text-align: right;
+}
+.footer-copyright
+{
+  margin-bottom: -20px;
+}
