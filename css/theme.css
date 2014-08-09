@@ -2935,13 +2935,14 @@ h2 + .featured-section {
 }
 .myfooter > li > a:hover
 {
-  color: #000000;
+  color: #fff;
 }
 .myfooter
 {
   display: table;
   width: 100%;
   list-style: none;
+  background: transparent;
 }
 .myfooter > li
 {
@@ -2959,4 +2960,8 @@ h2 + .featured-section {
 .footer-copyright
 {
   margin-bottom: -20px;
+}
+.footer-copyrigh
+{
+  padding: 0px;
 }

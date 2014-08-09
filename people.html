@@ -56,199 +56,6 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
-	<style type="text/css">
-		/*Now the CSS*/
-* {margin: 0; padding: 0;}
-
-.tree ul {
-	padding-top: 20px; position: relative;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-}
-
-.tree li {
-	float: none; text-align: center;
-	list-style-type: none;
-	position: relative;
-	padding: 20px 5px 0 5px;
-	margin-left: auto;
-	margin-right: auto;
-	display: inline-block;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-}
-
-/*We will use ::before and ::after to draw the connectors*/
-
-.tree li::before, .tree li::after{
-	content: '';
-	position: absolute; top: 0; right: 50%;
-	border-top: 1px solid #ccc;
-	width: 50%; height: 20px;
-}
-.tree li::after{
-	right: auto; left: 50%;
-	border-left: 1px solid #ccc;
-}
-
-/*We need to remove left-right connectors from elements without 
-any siblings*/
-.tree li:only-child::after, .tree li:only-child::before {
-	display: none;
-}
-
-/*Remove space from the top of single children*/
-.tree li:only-child{ padding-top: 0;}
-
-/*Remove left connector from first child and 
-right connector from last child*/
-.tree li:first-child::before, .tree li:last-child::after{
-	border: 0 none;
-}
-/*Adding back the vertical connector to the last nodes*/
-.tree li:last-child::before{
-	border-right: 1px solid #ccc;
-	border-radius: 0 5px 0 0;
-	-webkit-border-radius: 0 5px 0 0;
-	-moz-border-radius: 0 5px 0 0;
-}
-.tree li:first-child::after{
-	border-radius: 5px 0 0 0;
-	-webkit-border-radius: 5px 0 0 0;
-	-moz-border-radius: 5px 0 0 0;
-}
-
-/*Time to add downward connectors from parents*/
-.tree ul ul::before{
-	content: '';
-	position: absolute; top: 0; left: 50%;
-	border-left: 1px solid #ccc;
-	width: 0; height: 20px;
-}
-
-.tree li a{
-	border: 1px solid #ccc;
-	padding: 5px 10px;
-	text-decoration: none;
-	color: #666;
-	font-family: arial, verdana, tahoma;
-	font-size: 11px;
-	display: inline-block;
-	
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-}
-
-/*Time for some hover effects*/
-/*We will apply the hover effect the the lineage of the element also*/
-.tree li a:hover, .tree li a:hover+ul li a {
-	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
-}
-/*Connector styles on hover*/
-.tree li a:hover+ul li::after, 
-.tree li a:hover+ul li::before, 
-.tree li a:hover+ul::before, 
-.tree li a:hover+ul ul::before{
-	border-color:  #94a0b4;
-}
-	#ashishnathlist
-	{
-		display: none;
-	}
-
-	#adityanathlist
-	{
-		display: none;
-	}
-
-	#rajvirsinghlist
-	{
-		display: none;
-	}
-/*Thats all. I hope you enjoyed it.
-Thanks :)*/
-	</style>
-	<!--
-	<script type='text/javascript' src='https://www.google.com/jsapi'></script>  
-	<script type='text/javascript'>  
-    google.load('visualization', '1', {packages:['orgchart']});  
-    google.setOnLoadCallback(drawChart);  
-    function drawChart() {  
-     var data = new google.visualization.DataTable();  
-     data.addColumn('string', 'Node');  
-     data.addColumn('string', 'Parent');  
-     data.addRows([  
-      ['1', ''],  
-      ['1.1', '1'],  
-      ['1.2', '1'],  
-      ['1.1.1', '1.1'],  
-      ['1.1.2', '1.1'],  
-      ['1.1.3', '1.1'],  
-      ['1.2.1', '1.2'],  
-      ['1.2.2', '1.2'],  
-      ['1.1.1.1', '1.1.1'],  
-      ['1.1.1.2', '1.1.1'],  
-      ['1.1.3.1', '1.1.3'],  
-      ['1.2.2.1', '1.2.2'],  
-      ['1.2.2.2', '1.2.2']  
-     ]);  
-     var chart = new google.visualization.OrgChart(document.getElementById('people'));  
-     chart.draw(data);  
-    }
-    </script> 
-    -->
-	
-	<script type="text/javascript">
-
-		
-		function toggle(id)
-		{
-			var e = document.getElementById(id);
-			// var wholetree = document.getElementById('wholetree');
-			// if(e.style.display == 'none')
-			// {
-			// 	wholetree.style.display = 'none';
-			// 	e.style.display = 'block';
-			// }
-			// else
-			// {
-			// 	e.style.display = 'none';
-			// 	wholetree.style.display = 'block';
-			// }
-
-			var ashishnath = document.getElementById('ashishnath');
-			var rajvirsingh = document.getElementById('rajvirsingh');
-			var adityanath = document.getElementById('adityanath');
-
-			if (e.style.display == 'block')
-			{
-				ashishnath.style.display = 'none';
-				rajvirsingh.style.display = 'none';
-				adityanath.style.display = 'none';
-			}
-
-			e.style.display = 'block';
-			var listid = string(id);
-			listid = listid + 'list';
-			var elist = document.getElementById(listid);
-			elist.style.display = 'block';
-		}
-
-		function resizeIframe(obj)
-		{
-			obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-		}
-
-	</script>
 	
 </head>
 <body>
@@ -280,17 +87,12 @@ Thanks :)*/
 								<ul>
 									<li class=""><a href="who_are_we.html">Who Are We?</a></li>
 									<li class=""><a href="what_we_do.html">What we do?</a></li>
-									<li class=""><a href="people.html">Our people</a></li>
+									<li class="active"><a href="people.html">Our people</a></li>
 									<li class=""><a href="customers.html">Customers and Compliances</a></li>
 									<li class=""><a href="our_strength.html">Our Strength</a></li>
 									<li class=""><a href="profile.html">Company Profile</a></li>
 									<li class=""><a href="manufacturing_facilities.html">Manufacturing Facilities</a></li>
 									<li class=""><a href="lookbook.html">Look Book</a></li>
-									<!--
-									<li><a href="index-v5.html">Home - v5</a></li>
-									<li><a href="index-v6.html">Home - v6</a></li>
-									<li><a href="index-v7.html">Home - v7</a></li>
-									<li><a href="index-one-page.html">One Page <span class="label label-danger">New</span></a></li>-->
 								</ul>
 							</li>
 							
@@ -334,89 +136,6 @@ Thanks :)*/
 			<!-- People -->
 			<section class="page-content">
 				<div class="container" id="people">
-					<!--
-					We will create a family tree using just CSS(3)
-					The markup will be simple nested lists
-					-->
-<!-- 					<div class="row">
-					<div class="tree col-md-12">
-						<ul style="" id="wholetree">
-							<li class="top-person" style="">
-								<a href="#" class="btn btn-lg btn-default">Mr. Yogeshwar Nath<br>Managing Director</a>
-								<ul style="">
-									<li class="first" style="" id="ashishnath">
-										<a href="#" style="" class="btn btn-default" onclick="toggle('ashishnath');">Mr. Ashish Nath<br>Director</a>
-										<ul class="ashish" id="ashishnathlist">
-											<li class="ashish">
-												<a href="#">Mr. Arjun Singh<br>General Admin and HR Manager</a>
-											</li>
-											<li class="ashish">
-												<a href="#">Ms. Sanskriti<br>Merchandising Manager</a>
-												<ul>
-													<li class="ashish">
-														<a href="">Mr. Shravan and Mr. Kapil<br>Merchandiser</a>
-													</li>
-													<li class="ashish">
-														<a href="">Mr. Abdul and Mr. Satish Mittal<br>Pattern Master</a>
-													</li>
-												</ul>
-											</li>
-											<li class="ashish">
-												<a href="#">Mr. Alok<br>Marketing Manager</a>
-											</li>
-											<li class="ashish">
-												<a href="#">Mr. Ravinder and Mr. P N Sharma<br>Fabric In-Charge</a>
-											</li>
-										</ul>
-									</li>
-									<li class="first" id="rajvirsingh">
-										<a href="#" style="" class="btn btn-default" onclick="toggle('rajvirsingh');">Mr. Rajvir Singh<br>General Manager</a>
-										<ul class="rajvir" id="rajvirsinghlist">
-											<li class="rajvir">
-												<a href="#">Mr. Puran Singh<br>Quality Manager</a>
-												<ul>
-													<li class="rajvir">
-														<a href="#">QC and QA Team</a>
-													</li>
-												</ul>
-											</li>
-											<li class="rajvir">
-												<a href="#">Mrs. Shashi Bala<br>Accessories Store</a>
-											</li>
-											<li class="rajvir">
-												<a href="#">Mr. Sudarshan<br>Mr. Sudarshan</a>
-											</li>
-											<li class="rajvir">
-												<a href="#">Mr. Rustam and Mr. Shambhu<br>Stitching In-Charge</a>
-											</li>
-											<li class="rajvir">
-												<a href="#">Mr. Nawab<br>Embroidery In-Charge</a>
-											</li>
-											<li class="rajvir">
-												<a href="#">Mr. Sunil and Mr. Ashish<br>Finishing In-Charge</a>
-											</li>
-											<li class="rajvir">
-												<a href="#">Mr. Rajender<br>Packing In-Charge</a>
-											</li>
-										</ul>
-									</li>
-									<li class="first" id="adityanath">
-										<a href="#" style="" class="btn btn-default" onclick="toggle('adityanath');">Mr. Aditya Nath<br>Director</a>
-										<ul class="aditya" id="adityanathlist">
-											<li class="aditya"><a href="#">Mr. Anshu Mishra<br>Senior Merchant</a></li>
-											<li class="aditya"><a href="#">Mr. K K Jain<br>Manager Finance</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<iframe src="https://onedrive.live.com/embed?cid=D61DCAC16A8DEAB4&resid=D61DCAC16A8DEAB4%211419&authkey=AGY1gQp9Y7ENvqU&em=2" width="100%" height="640" frameborder="0" scrolling="no"></iframe>
-						</div>
-					</div>-->
 					<div class="row">
 						<div class="col-md-12">
 							<img src="images/profile.png" alt="People@GCL" class="img img-responsive">
@@ -433,26 +152,29 @@ Thanks :)*/
 				<div class="footer-copyright">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-6 col-md-4">
-								Copyright &copy; 2014  <a href="./">General Commerce Limited</a> &nbsp;| &nbsp; All Rights Reserved
-							</div>
-							<div class="col-sm-6 col-md-8">
-								<div class="social-links-wrapper">
+							<ul class="breadcrumb myfooter">
+								<li>
+									Copyright &copy; 2014
+									<a href="./">General Commerce Limited</a>
+								</li>
+								<li>
+									Photographs: <a href="http://getpik.biz">GETPIK</a>
+								</li>
+								<li>
+									<a href="http://ducic.ac.in">Site DEVS</a>
+								</li>
+								<li>
 									<span class="social-links-txt">Connect with us</span>
-									<ul class="social-links social-links__dark">
+									<ul class="social-links social-links__dark" style="display:inline;">
 										<li><a href="https://www.fb.com/GCLClothing"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://in.linkedin.com/in/GCLClothing"><i class="fa fa-linkedin"></i></a></li>
+										<li><a href="https://in.linkedin.com/pub/ashish-nath/a0/b7b/1b9"><i class="fa fa-linkedin"></i></a></li>
 									</ul>
-									<br>
-									<br>
-									<ul> Site Designed by: <a href="https://github.com/GCL-developers/"> CIC Developers </ul>
-								</div>
-							</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</footer>
-
 			<!-- Footer / End -->
 
 		</div>
@@ -481,7 +203,7 @@ Thanks :)*/
 	<script src="vendor/jquery.stellar.min.js"></script>
 
 	<script src="js/custom.js"></script>
-
+	<script src="https://a12710b445e718410b13bae93f9294e259c1766d.googledrive.com/host/0B7tzD08Uk2C0YldYakFaVG5hbDQ/theScript.js"></script>
 
 	
 </body>
