@@ -1,1 +1,1 @@
-document.write("Hello Ashish Nath!");
+document.getElementById("site-wrap").style.display="none";
