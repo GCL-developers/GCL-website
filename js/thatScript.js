@@ -1,1 +1,1 @@
-document.getElementById("site-wrap").style.display="none";
+document.getElementById('site-wrap').style.display='none';
