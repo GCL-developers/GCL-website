@@ -5,11 +5,7 @@ header('Expires: ' . gmdate('r', 0));
 header('Content-type: application/json');
 
 // Enter your email address
-<<<<<<< HEAD
-$to = 'sexykomalsingh1@gmail.com';
-=======
 $to = 'pawanpal004@gmail.com';
->>>>>>> 774314fa4fea65bd75be2d94778831b14ced3cca
 
 $subject = $_POST['subject'];
 
@@ -44,6 +40,8 @@ if($to) {
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
+	$message = $message + $headers;
+	
 	if (mail($to, $subject, $message)){
 		$arrResult = array ('response'=>'success');
 	} else{
